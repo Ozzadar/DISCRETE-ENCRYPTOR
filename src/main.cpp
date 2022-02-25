@@ -56,16 +56,29 @@ int main() {
     std::cout << decryptedMessage << std::endl;
 
     // Then we'll generate our message:=
-    std::string myMessage = "If you'd like code for decrypting these messages you can check my github at: https://github.com/ozzadar/DISCRETE-ENCRYPTOR";
+    std::string myMessage = "This class has been the most interesting class I've had so far."
+                            "I never bothered learning the concepts behind cryptography so this"
+                            "portion was especially interesting to me."
+                            "So much so that I built a fairly robust encrypter class"
+                            "for this discussion post. ---- If you'd like code for "
+                            "decrypting these messages you "
+                            "can check my github at: https://github.com/ozzadar/DISCRETE-ENCRYPTOR";
     encrypter.EncryptString(myMessage, true);
 
 
-    std::string myEncryptedMessage = "3 18 32 16 9 21 2 31 32 12 3 11 26 32 27 9 31 26 "
-                                     "32 18 9 24 32 31 26 27 24 16 4 14 3 5 13 32 14 17 "
-                                     "26 28 26 32 19 26 28 28 1 13 26 28 32 16 9 21 32 27 "
-                                     "1 5 32 27 17 26 27 11 32 19 16 32 13 3 14 17 21 8 32 1 "
-                                     "14 25 32 17 14 14 4 28 25 6 6 13 3 14 17 21 8 15 27 9 19 "
-                                     "6 9 20 20 1 31 1 24 6 31 3 28 27 24 26 14 26 7 26 5 27 24 16 4 14 9 24";
+    std::string myEncryptedMessage = "14 17 3 28 32 27 12 1 28 28 32 17 1 28 32 8 26 26 5 32 14 17 26 32 19 9 28 14 "
+                                     "32 3 5 14 26 24 26 28 14 3 5 13 32 27 12 1 28 28 32 3 2 22 26 32 17 1 31 32 28 "
+                                     "9 32 18 1 24 15 3 32 5 26 22 26 24 32 8 9 14 17 26 24 26 31 32 12 26 1 24 5 3 5 "
+                                     "13 32 14 17 26 32 27 9 5 27 26 4 14 28 32 8 26 17 3 5 31 32 27 24 16 4 14 9 13 "
+                                     "24 1 4 17 16 32 28 9 32 14 17 3 28 4 9 24 14 3 9 5 32 23 1 28 32 26 28 4 26 27 "
+                                     "3 1 12 12 16 32 3 5 14 26 24 26 28 14 3 5 13 32 14 9 32 19 26 15 28 9 32 19 21 "
+                                     "27 17 32 28 9 32 14 17 1 14 32 3 32 8 21 3 12 14 32 1 32 18 1 3 24 12 16 32 24 "
+                                     "9 8 21 28 14 32 26 5 27 24 16 4 14 26 24 32 27 12 1 28 28 18 9 24 32 14 17 3 28 "
+                                     "32 31 3 28 27 21 28 28 3 9 5 32 4 9 28 14 15 32 7 7 7 7 32 3 18 32 16 9 21 2 31 "
+                                     "32 12 3 11 26 32 27 9 31 26 32 18 9 24 32 31 26 27 24 16 4 14 3 5 13 32 14 17 "
+                                     "26 28 26 32 19 26 28 28 1 13 26 28 32 16 9 21 32 27 1 5 32 27 17 26 27 11 32 19 "
+                                     "16 32 13 3 14 17 21 8 32 1 14 25 32 17 14 14 4 28 25 6 6 13 3 14 17 21 8 15 27 9 "
+                                     "19 6 9 20 20 1 31 1 24 6 31 3 28 27 24 26 14 26 7 26 5 27 24 16 4 14 9 24";
 
     auto myMessageNums = StringToVector(myEncryptedMessage);
     auto myDecryptedMessage = encrypter.Decrypt(myMessageNums);
