@@ -32,11 +32,7 @@ int main() {
     // First we decrypt two classmates messages:
 
     // Message one
-    std::string message1 = "26 01 27 17 32 19 09 31 21 12 26 32 04 24 26 28 26 05 14 26 31 32 "
-                           "01 32 21 05 03 29 21 26 32 19 26 05 14 01 12 32 27 17 01 12 12 26 "
-                           "05 13 26 32 08 21 14 32 09 05 27 26 32 13 24 01 28 04 26 31 32 23 "
-                           "17 01 14 32 01 32 28 26 05 28 26 32 09 18 32 01 27 27 09 19 04 12 "
-                           "03 28 17 19 26 05 14 ";
+    std::string message1 = "19 01 14 17 32 03 28 32 27 09 09 12";
 
     auto message1Nums = StringToVector(message1);
     auto decryptedMessage1 = encrypter.Decrypt(message1Nums);

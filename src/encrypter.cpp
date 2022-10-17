@@ -20,7 +20,7 @@ std::vector<long> Encrypter::EncryptString(const std::string &message, bool prin
     for (int i = 0; i < nums.size(); i++) {
         auto num = nums[i];
 
-        encrypted[i] = static_cast<long>(pow(num, _e)) % (_q * _p);
+        encrypted[i] = static_cast<long long>(pow(num, _e)) % (_q * _p);
         if (print) {
             std::cout << encrypted[i] << " ";
         }
@@ -38,7 +38,7 @@ std::string Encrypter::Decrypt(const std::vector<long> &message) const {
     // Decrypt each letter
     for (int i = 0; i < message.size(); i++) {
         auto eNum = message[i];
-        nums[i] = static_cast<long>(pow(eNum, _d)) % (_p * _q);
+        nums[i] = static_cast<long long>(pow(eNum, _d)) % (_p * _q);
     }
 
     return ConvertNumbersToString(nums);
